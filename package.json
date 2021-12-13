@@ -1,0 +1,14 @@
+{
+  "name": "juego-cohetes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Addison Calles",
+  "license": "ISC",
+  "dependencies": {
+    "streetzero": "^0.3.1"
+  }
+}
