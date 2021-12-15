@@ -26,7 +26,7 @@ export class Player extends Kinematic {
             rocket.move();
             rocket.render();
         });
-        this.#healthBar.render();
+        //this.#healthBar.render();
         this.#rockets = this.#rockets.filter(rocket => !rocket.edgeColision() && !rocket.isDestroy());
         super.render();
     }
@@ -34,6 +34,7 @@ export class Player extends Kinematic {
         if (this.#rockets.length >= this.#maxRockts) return;
         const rocket = new Rocket(canvas, 'gray', this.x + 5, this.y + 15);
         rocket.vector.setVector(15, this.rotation);
+        if(this.isDebug) rocket.enableDebug();
         this.#rockets.push(rocket)
     }
     isShootedEnemy(enemy) {
